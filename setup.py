@@ -2,6 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='theta',
+    year='2025',
     version='0.2',
     packages=find_packages(exclude=['tests*']),
     license='GPL-3.0',
