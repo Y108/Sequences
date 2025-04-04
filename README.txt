@@ -1,3 +1,3 @@
-theta , ϑ
+theta
 
-A collection of sequences and sequence operations, used for personal projects.
+A package containing a collection of sequences and sequence operations, used for personal projects.
