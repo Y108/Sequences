@@ -8,7 +8,7 @@ setup(
     license='GPL-3.0',
     description='A collection of sequences and sequence operations',
     long_description=open('README.txt').read(),
-    install_requires=[os],
+    install_requires=[],
     url='https://github.com/Y108/theta',
     author='Y108',
     author_email='',
