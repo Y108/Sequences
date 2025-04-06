@@ -15,28 +15,24 @@ def seq_assign(A, B):
             for key in S:
                 print(f"p({key}): {S[key]}")
 
-        def errors(n):  
-
-            if n == 1: print('\033[91mWarning: Both inputs of \033[93madd_lst\033[91m have to be of type list!\033[0m')
-            if n == 2: print('\033[91mWarning: Both inputs of \033[93madd_lst\033[91m have to contain at least \033[93m 1 \033[91m element!\033[0m')
-
-        if sorted(list(set(A))) == sorted(A): #check if the output equals the 1-1 assignment of the two sequences
-            
-
-            if X == Y:
-                print(f'I:{A}\nII:{B}')
-            
-            if X > Y:
-                print(f'I:{A[:-abs_diff]}\nII:{B}')
-
-            if X < Y:
-                print(f'I:{A}\nII:{B[:-abs_diff]}')
+        if not(isinstance(A, list) and isinstance(B, list)):
+                
+            raise ValueError("Both inputs of function have to be of type list!")
         
-        elif not(isinstance(A, list) and isinstance(B, list)):
-            errors(2)
-        
-        elif not(X > 0 and Y > 0):
-            errors(2)
+        elif not(X > 0 and Y > 0) or (any(isinstance(item, str) and item.strip() == "" for item in A or B)):
+                
+            raise ValueError("Both inputs of function have to contain at least one element!")
+
+        elif sorted(list(set(A))) == sorted(A) or len(B) == len(A[:-abs_diff]):
+                
+                if X == Y:
+                    print(f'I:{A}\nII:{B}')
+                
+                if X > Y:
+                    print(f'I:{A[:-abs_diff]}\nII:{B}')
+
+                if X < Y:
+                    print(f'I:{A}\nII:{B[:-abs_diff]}')
 
         else:
                 if X>=Y:
