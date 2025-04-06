@@ -25,7 +25,7 @@ def seq_assign(A, B):
 
         elif any(isinstance(item, str) and item.strip() == "" for item in A or B):
 
-            raise ValueError("Both inputs of functions can't contain any empty elements (e.G. " " or ' ')")
+            raise ValueError("Both inputs of function can't contain any empty elements (e.G. " " or ' ')")
         
         elif sorted(list(set(A))) == sorted(A) or len(B) == len(A[:-abs_diff]):
                 
