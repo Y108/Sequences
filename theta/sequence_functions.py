@@ -19,10 +19,14 @@ def seq_assign(A, B):
                 
             raise ValueError("Both inputs of function have to be of type list!")
         
-        elif not(X > 0 and Y > 0) or (any(isinstance(item, str) and item.strip() == "" for item in A or B)):
+        elif not(X > 0 and Y > 0):
                 
             raise ValueError("Both inputs of function have to contain at least one element!")
 
+        elif any(isinstance(item, str) and item.strip() == "" for item in A or B):
+
+            raise ValueError("Both inputs of functions can't contain any empty elements (e.G. " " or ' ')")
+        
         elif sorted(list(set(A))) == sorted(A) or len(B) == len(A[:-abs_diff]):
                 
                 if X == Y:
