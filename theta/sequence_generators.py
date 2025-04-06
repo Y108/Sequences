@@ -31,7 +31,8 @@ def IV_Thue_Morse(n):
         K = [int(i) for i in ''.join(
             str(4123) if x == 4 else 
             str(3412) if x == 3 else 
-            str(2341) if x == 2 else str(1234) if x == 1 else 
+            str(2341) if x == 2 else 
+            str(1234) if x == 1 else 
             str(x) for x in K)]
     return K
 
