@@ -27,7 +27,7 @@ def seq_assign(A, B):
 
             raise ValueError("Both inputs of function can't contain any empty elements (e.G. " " or ' ')")
         
-        elif sorted(list(set(A))) == sorted(A) or len(B) == len(A[:-abs_diff]):
+        elif sorted(list(set(A))) == sorted(A):
                 
                 if X == Y:
                     print(f'I:{A}\nII:{B}')
