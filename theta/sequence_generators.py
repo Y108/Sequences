@@ -36,13 +36,13 @@ def IV_Thue_Morse(n):
     return K
 
 def IV_Thue_Morse_Alt(n):
-    K = [3]  # Start with an initial value (e.g., [3])
+    K = [4]
     for j in range(n):
         K = [int(i) for i in ''.join(
+            str(43) if x == 4 else
             str(32) if x == 3 else
             str(21) if x == 2 else
-            str(10) if x == 1 else
-            str(01) if x == 0 else
+            str(12) if x == 1 else
             str(x) for x in K
         )]
     return K
