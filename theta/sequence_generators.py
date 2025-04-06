@@ -18,13 +18,21 @@ def III_thue_morse(n):
 def III_Thue_Morse_Alt(n):
     K = [3]
     for j in range(n):
-        K = [int(i) for i in ''.join(str(32) if x == 3 else str(13) if x == 2 else str(12) if x == 1 else str(x) for x in K)]
+        K = [int(i) for i in ''.join(
+            str(32) if x == 3 else 
+            str(13) if x == 2 else 
+            str(12) if x == 1 else 
+            str(x) for x in K)]
     return K
 
 def IV_Thue_Morse(n):
     K = [4]
     for j in range(n):
-        K = [int(i) for i in ''.join(str(4123) if x == 4 else str(3412) if x == 3 else str(2341) if x == 2 else str(1234) if x == 1 else str(x) for x in K)]
+        K = [int(i) for i in ''.join(
+            str(4123) if x == 4 else 
+            str(3412) if x == 3 else 
+            str(2341) if x == 2 else str(1234) if x == 1 else 
+            str(x) for x in K)]
     return K
 
 def Index(n):
