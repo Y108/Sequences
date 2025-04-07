@@ -50,3 +50,13 @@ def IV_Thue_Morse_Alt(n):
 
 def Index(n):
     return list(range(1, n+1))
+
+def Fibonacci(n):
+    F = [1,]
+    a,b = 0,1
+    for i in range(n):
+        c = a + b
+        F.append(c)
+        a = b
+        b = c
+    return F
