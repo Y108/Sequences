@@ -1,10 +1,4 @@
-def II_thue_morse(n):
-    a, b = '0', '1'
-    for j in range(n):
-        a, b = a + b, b + a
-    return [*(int(x) for x in a)]
-
-def III_thue_morse(n):
+def FracDel(n):
     A = [3]
     def sub(A, j):
         B = [x for x in A for y in range(2)]
@@ -15,7 +9,13 @@ def III_thue_morse(n):
         A = sub(A, j)
     return A
 
-def III_Thue_Morse_Alt(n):
+def II_ThueMorse(n):
+    a, b = '0', '1'
+    for j in range(n):
+        a, b = a + b, b + a
+    return [*(int(x) for x in a)]
+
+def III_ThueMorse(n):
     K = [3]
     for j in range(n):
         K = [int(i) for i in ''.join(
@@ -34,18 +34,6 @@ def IV_Thue_Morse(n):
             str(2341) if x == 2 else 
             str(1234) if x == 1 else 
             str(x) for x in K)]
-    return K
-
-def IV_Thue_Morse_Alt(n):
-    K = [4]
-    for j in range(n):
-        K = [int(i) for i in ''.join(
-            str(43) if x == 4 else
-            str(32) if x == 3 else
-            str(21) if x == 2 else
-            str(12) if x == 1 else
-            str(x) for x in K
-        )]
     return K
 
 def Index(n):
