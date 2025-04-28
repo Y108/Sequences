@@ -9,6 +9,16 @@ def FracDel(n):
         A = sub(A, j)
     return A
 
+def Collatz(n):
+    S = [n]
+    while n != 1:
+        if n%2 == 0:
+            n = n//2
+        else:
+            n= 3*n+1
+        S.append(n)
+    return S
+
 def II_ThueMorse(n):
     a, b = '0', '1'
     for j in range(n):
