@@ -4,9 +4,15 @@ def seq_add(A, B):
 def seq_diff(A, B):
     return [a - b for a, b in zip(A, B)]
 
+def seq_diff_abs(A, B):
+    return [abs(a - b) for a, b in zip(A, B)]
+
 def seq_self_diff(A):
     return [(A[i + 1] - A[i]) for i in range(len(A) - 1)]
 
+def seq_self_diff_abs(A):
+    return [abs((A[i + 1] - A[i])) for i in range(len(A) - 1)]
+    
 def seq_mod_n(A, n):
     return [a % n for a in A]
 
