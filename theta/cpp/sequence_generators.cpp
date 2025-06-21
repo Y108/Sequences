@@ -6,11 +6,11 @@ std::vector<int> FracDel(const int j) {
     for (int i = 0; i <= j; i++) {
         int G = 3;
         N.clear();
-        N.reserve(S.size() * 2);
             for (int s : S) {
                 N.push_back(s);
                 N.push_back(s);
             }
+        S.clear();
         S = {3};
             for (int n : N) {
                 G+=n;
