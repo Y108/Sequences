@@ -1,9 +1,12 @@
+#include <vector>
+
 std::vector<int> FracDel(const int j) {
     std::vector<int> N;
     std::vector S = {3};
     for (int i = 0; i <= j; i++) {
         int G = 3;
-        N = {};
+        N.clear();
+        N.reserve(S.size() * 2);
             for (int s : S) {
                 N.push_back(s);
                 N.push_back(s);
